@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { clsx } from 'clsx';
-import { Menu, X, User, MessageSquare, HelpCircle } from 'lucide-react';
+import { Menu, X, User, MessageSquare, HelpCircle, Bot, FileText, Settings, BarChart3 } from 'lucide-react';
 
 interface SidebarProps {
   className?: string;
 }
 
 const menuItems = [
-  { icon: '🤖', label: 'Basic', active: true },
-  { icon: '📝', label: 'Advanced', active: false },
-  { icon: '🔧', label: 'Tools', active: false },
-  { icon: '📊', label: 'Analytics', active: false },
+  { icon: Bot, label: 'Basic', active: true },
+  { icon: FileText, label: 'Advanced', active: false },
+  { icon: Settings, label: 'Tools', active: false },
+  { icon: BarChart3, label: 'Analytics', active: false },
 ];
 
 const helpItems = [
@@ -68,7 +68,7 @@ export function Sidebar({ className }: SidebarProps) {
                     : "bg-grey-7 hover:bg-grey-6"
                 )}
               >
-                <span className="text-lg">{item.icon}</span>
+                <item.icon className="w-5 h-5" />
                 <span className="font-arial text-sm lg:text-xs">{item.label}</span>
               </button>
             ))}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, BookOpen, Zap, MessageSquare, Download, Eye } from 'lucide-react';
+import { Search, BookOpen, Zap, MessageSquare, Download, Eye, X } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Input } from '../ui/Input';
 import { clsx } from 'clsx';
@@ -381,7 +381,7 @@ export function TemplateGallery({ onSelectTemplate, className }: TemplateGallery
                   size="sm"
                   onClick={() => setSelectedTemplate(null)}
                 >
-                  ✕
+                  <X className="w-4 h-4" />
                 </Button>
               </div>
             </div>
